@@ -1,0 +1,43 @@
+﻿<!DOCTYPE html>
+
+<html ng-app="newsFeed" ng-controller="homePageController">
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Connect - News Feed</title>
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/Content/bootstrap-theme.min.css" rel="stylesheet" />
+    <link href="~/Content/newsfeed.css" rel="stylesheet" />
+</head>
+<body>
+    <div id="wrapper" class="container-fluid">
+        <nav class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container-fluid">
+                @Html.ActionLink("Connect - News Feed", "Index", "Home", new { @class= "navbar-brand" })
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <p class="navbar-text" ng-bind="currentDate()"></p>
+                    </li>
+                    <li>
+                        <a ng-href='#here' ng-click='loadMore()'>Load More</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <div id="main" class="container-fluid">
+            <div ng-view></div>
+        </div>
+        <div id="footer" class="container-fluid">
+            <div class="navbar navbar-inverse navbar-fixed-bottom">
+                <h4 class="text-center text-info">&copy; 2017 Chris Woodcock</h4>
+            </div>
+        </div>
+    </div>
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.20/angular.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.20/angular-route.min.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+    <script src="~/Scripts/jquery-1.9.1.min.js"></script>
+    <script src="~/Scripts/moment.min.js"></script>
+    @Scripts.Render("~/bundles/NewsFeed")
+</body>
+</html>

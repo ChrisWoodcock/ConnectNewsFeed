@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NewsFeed", "NewsFeed\NewsFeed.csproj", "{4A9F008E-CC7C-457F-B94B-7DE16DD3B6E2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NewsFeed.API", "NewsFeed.API\NewsFeed.API.csproj", "{98C90573-9A3E-4ECE-B530-46E94C0F7A71}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NewsFeed.Domain", "NewsFeed.Domain\NewsFeed.Domain.csproj", "{82AF3A23-B483-487A-A591-2BD02AEE2060}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4A9F008E-CC7C-457F-B94B-7DE16DD3B6E2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4A9F008E-CC7C-457F-B94B-7DE16DD3B6E2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4A9F008E-CC7C-457F-B94B-7DE16DD3B6E2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4A9F008E-CC7C-457F-B94B-7DE16DD3B6E2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{98C90573-9A3E-4ECE-B530-46E94C0F7A71}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{98C90573-9A3E-4ECE-B530-46E94C0F7A71}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{98C90573-9A3E-4ECE-B530-46E94C0F7A71}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{98C90573-9A3E-4ECE-B530-46E94C0F7A71}.Release|Any CPU.Build.0 = Release|Any CPU
+		{82AF3A23-B483-487A-A591-2BD02AEE2060}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{82AF3A23-B483-487A-A591-2BD02AEE2060}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{82AF3A23-B483-487A-A591-2BD02AEE2060}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{82AF3A23-B483-487A-A591-2BD02AEE2060}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
