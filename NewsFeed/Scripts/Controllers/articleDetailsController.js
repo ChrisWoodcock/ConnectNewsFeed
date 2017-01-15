@@ -21,4 +21,4 @@
     });
 }
 
-articlesController.$inject = ['$sce', '$routeParams', '$http'];
+articleDetailsController.$inject = ['$sce', '$routeParams', '$http'];
