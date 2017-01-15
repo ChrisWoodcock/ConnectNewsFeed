@@ -162,7 +162,7 @@ namespace NewsFeed.API.SeedData
                         ArticleId = 9,
                         ChannelId = 1,
                         Channel = Channels.Single(p => p.Name == "UK"),
-                        Published = new DateTime(2015, 01, 01),
+                        Published = new DateTime(2016, 01, 01),
                         Title = "Storm surge flood threat to east coast of England",
                         Leader = "Severe flood warnings are in place along the eastern coast of England, amid fears thousands of homes are at risk from a storm surge.",
                         Body = @"<p>The Environment Agency said the morning tide was not as high as expected but it has issued severe flood warnings - meaning danger to life - for later.</p>" +
@@ -170,6 +170,89 @@ namespace NewsFeed.API.SeedData
                                 @"<p>It comes as the Met Office has warned of high winds, snow and ice on Friday.</p>"
 
                     },
+                    new Article
+                    {
+                        ArticleId = 10,
+                        ChannelId = 2,
+                        Channel = Channels.Single(p => p.Name == "World"),
+                        Published = new DateTime(2018, 01, 01),
+                        Title = "John Kerry finds Vietnam War site where he killed a man",
+                        Leader = "The outgoing US Secretary of State John Kerry has visited the place in the Mekong Delta where he was ambushed during the Vietnam war.",
+                        Body = @"<p>The former Navy lieutenant met a 70-year-old former member of the Viet Cong, who remembers the 1969 attack.</p>" +
+                                @"<p>The pair warmly shook hands.</p>" +
+                                @"<p>Mr Kerry, who is in Vietnam as part of his last trip before leaving office, won a medal for bravery for his actions but became an anti - war campaigner after returning home.</p>" +
+                                @"<p>Mr Kerry told his former enemy, Vo Ban Tam, he was glad they were both alive.</p>" +
+                                @"<p>Mr Tam, now a shrimp farmer, said he knew a man whom Mr Kerry shot and killed and remembered the plan of attack when they first spotted the US patrol boat.</p>"
+                    },
+                    new Article
+                    {
+                        ArticleId = 11,
+                        ChannelId = 2,
+                        Channel = Channels.Single(p => p.Name == "World"),
+                        Published = new DateTime(2018, 01, 01),
+                        Title = "Israel-Palestinian conflict: France holds world summit",
+                        Leader = "A major international conference to try to kick-start peace talks between Israel and the Palestinians is being held in the French capital, Paris.",
+                        Body = @"<p>Delegates from 70 nations are expected to reaffirm support for a two-state solution to the decades - old conflict.</p>" +
+                                @"<p>Palestinians have welcomed the meeting but Israel - which is not attending - says the conference is loaded against it.</p>" +
+                                @"<p>The last round of direct peace talks collapsed amid acrimony in April 2014.</p>" +
+                                @"<p>Israel and the Palestinians have been invited to hear the conclusions of the meeting, but not to participate in the summit itself.</p>"
+                    },
+                    new Article
+                    {
+                        ArticleId = 12,
+                        ChannelId = 2,
+                        Channel = Channels.Single(p => p.Name == "World"),
+                        Published = new DateTime(2018, 01, 01),
+                        Title = "Brazil prisoners beheaded in riot at Natal prison",
+                        Leader = "At least 10 prisoners have been killed in fighting between rival gangs at the largest prison in the north-eastern Brazilian city of Natal, police say.",
+                        Body = @"<p>It took 14 hours for police to regain control of Alcacuz jail.</p>" +
+                                @"<p>""The operation is still ongoing but the situation is now calm"", a spokesperson told BBC Brasil.</p>" +
+                                @"<p>This is the third major riot in Brazil this year.Nearly 100 inmates died in riots earlier this month in prisons in the states of Amazonas and Roraima.</p>" +
+                                @"<p>The violence inside Alcacuz jail, in Rio Grande Do Norte state, began on Saturday afternoon, when members of one of the powerful criminal organisations present in most Brazilian jails attacked rivals in a separate wing.</p>" + 
+                                @"<p>""We could see the heads ripped off"" three of the dead prisoners, said Zemilton Silva, coordinator of the prison system.</p>" +
+                                @"<p>Security forces managed to enter the outer area of the prison but decided to wait for daylight hours before going in on Sunday morning.</p>"
+                    },
+                    new Article
+                    {
+                        ArticleId = 13,
+                        ChannelId = 4,
+                        Channel = Channels.Single(p => p.Name == "Tech"),
+                        Published = new DateTime(2018, 01, 01),
+                        Title = "Faraday Future's cash flow woe",
+                        Leader = "Faraday Future, the company hoping to beat Tesla in the electric car game, had to halt building its factory in order to afford its glitzy CES press event, the firm told the BBC.",
+                        Body = @"<p>The company broke ground on its enormous plant in the Nevada desert in April last year - but work halted in October amid reports the company was in dire financial straits.</p>" +
+                                @"<p>Speaking on the record for the first time about the firm’s money woes, Faraday Future’s senior vice president of research and design, Nick Sampson, acknowledged the company was facing ""challenges"".</p>" +
+                                @"<p>""Clearly something like [CES] requires funding and some resources,"" Mr Sampson told me.</p>" +
+                                @"<p>""We are resource-limited at times. [It's] just a matter of keeping the cash flow balance between the different projects we’re trying to do.""</p>" +
+                                @"<p>No date has been set for work on the site to recommence.</p>"
+                    },
+                    new Article
+                    {
+                        ArticleId = 14,
+                        ChannelId = 4,
+                        Channel = Channels.Single(p => p.Name == "Tech"),
+                        Published = new DateTime(2018, 01, 01),
+                        Title = "Moderate screen use 'boosts teen wellbeing'",
+                        Leader = "A study of screen time and mental wellbeing among teenagers has suggested moderate use of devices may be beneficial in a connected world.",
+                        Body = @"<p>The researchers collected self-reported data from 120,000 English 15-year-olds about their digital device habits.</p>" +
+                                @"<p>They found a ""Goldilocks effect"" where a few hours of device-use seemed to boost mental wellbeing.</p>" +
+                                @"<p>One developmental psychologist welcomed the paper but said there was still room for more study.</p>" +
+                                @"<p>""Moderate engagement in digital activities is not harmful,"" notes the paper, published today in the journal Psychological Science.</p>" +
+                                @"<p>In addition, the first hour or two of screen time was actually associated with an increase in mental wellbeing for those using computers, smartphones, video games and watching TV or films.</p>" 
+                    },
+                    new Article
+                    {
+                        ArticleId = 15,
+                        ChannelId = 4,
+                        Channel = Channels.Single(p => p.Name == "Tech"),
+                        Published = new DateTime(2018, 01, 01),
+                        Title = "Bug 'exposes' WhatsApp message secrets",
+                        Leader = "Some messages sent through WhatsApp can be intercepted and read thanks to a bug in the app, suggests research.",
+                        Body = @"<p>The bug arises because of the way WhatsApp encrypts the messages sent via its service.</p>" +
+                                @"<p>Security expert Thomas Boelter found that eavesdropping was possible when circumstances called for encryption keys to be reissued.</p>" +
+                                @"<p>Mr Boelter told WhatsApp owner Facebook about the issue in April 2016 but it said it was not working on a fix.</p>" +
+                                @"<p>The response he received said that what he had discovered was expected behaviour.</p>"
+                    }
                 };
             }
         }

@@ -16,7 +16,7 @@
            $routeProvider.otherwise({ redirectTo: "/" });
        })
        .service('dateService', [function () {
-           var currentDate = new Date(2014, 0, 1); // Jan 01 2014
+           var currentDate = new Date(2015, 0, 1); // Jan 01 2015
            return {
                getCurrentDate: function () { return currentDate; },
                setCurrentDate: function (value) { currentDate = value; },
