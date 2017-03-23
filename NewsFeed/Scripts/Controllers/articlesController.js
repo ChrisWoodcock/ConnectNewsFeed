@@ -16,8 +16,9 @@
             articleService.getCurrentDate().getDate();
 
     // TO DO: configuration for deployment
-    var url = "http://localhost:55762" +
-        "/api/articles/date/";
+    var url = "http://newsfeedapi20170115020814.azurewebsites.net"
+    //var url = "http://localhost:55762"
+        + "/api/articles/date/";
 
     if (vm.channelName != null) {
         url = url + vm.channelName + "/" + date;

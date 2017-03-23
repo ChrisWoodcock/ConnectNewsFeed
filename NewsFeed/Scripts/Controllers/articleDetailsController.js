@@ -6,9 +6,9 @@
     vm.isBusy = true;
 
     // TO DO: configuration for deployment
-    //var url = "http://newsfeedapi20170115020814.azurewebsites.net/api/articles/"
-    var url = "http://localhost:55762/api/articles/"
-        + vm.articleId + "/details"
+    var url = "http://newsfeedapi20170115020814.azurewebsites.net"
+    //var url = "http://localhost:55762"
+        + "/api/articles/" + vm.articleId + "/details"
 
     $http.get(url).
         then(function (response) {

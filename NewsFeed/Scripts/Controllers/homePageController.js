@@ -22,8 +22,9 @@
     }
 
     // TO DO: configuration for deployment
-    //var url = "http://newsfeedapi20170115020814.azurewebsites.net/api/channels/" +
-    var url = "http://localhost:55762/api/channels/";
+    var url = "http://newsfeedapi20170115020814.azurewebsites.net"
+    //var url = "http://localhost:55762"
+        + "/api/channels/";
 
     $http.get(url).
         then(function (response) {
