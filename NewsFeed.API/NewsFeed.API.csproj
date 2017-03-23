@@ -156,6 +156,9 @@
     <Compile Include="App_Start\NinjectWebCommon.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\ArticlesController.cs" />
+    <Compile Include="Controllers\ChannelsController.cs" />
+    <Compile Include="DTO\ChannelDTO.cs" />
+    <Compile Include="Infrasturcture\InMemoryChannelRepository.cs" />
     <Compile Include="Infrasturcture\InMemoryDbSet.cs" />
     <Compile Include="Infrasturcture\InMemoryArticleRepository.cs" />
     <Compile Include="Infrasturcture\ChannelRepository.cs" />

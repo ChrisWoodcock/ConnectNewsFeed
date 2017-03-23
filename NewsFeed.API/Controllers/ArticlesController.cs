@@ -91,20 +91,22 @@ namespace NewsFeed.API.Controllers
             return Ok(article);
         }
 
-        [Route("{channel}")]
-        public IQueryable<ArticleDto> GetArticlesByChannel(string channel)
-        {
-            return _repository.Articles.Include(c => c.Channel)
-                .Where(c => c.Channel.Name.Equals(channel, StringComparison.OrdinalIgnoreCase))
-                .Select(AsArticleDto);
-        }
-
         [Route("date/{published:datetime:regex(\\d{4}-\\d{1,2}-\\d{1,2})}")]
-        [Route("date/{*published:datetime:regex(\\d{4}/\\d{1,2}/\\d{1,2})}")]  // match /yyyy/mm/dd
+        [Route("date/{*published:datetime:regex(\\d{4}/\\d{1,2}/\\d{1,2})}")]  // '*' catch-all segments to match /yyyy/mm/dd 
         public IQueryable<ArticleDto> GetArticles(DateTime published)
         {
             return _repository.Articles.Include(c => c.Channel)
                 .Where(a => a.Published <= published)
+                .OrderBy(a => a.Published)
+                .Select(AsArticleDto);
+        }
+
+        [Route("date/{channelName}/{published:datetime:regex(\\d{4}-\\d{1,2}-\\d{1,2})}")]
+        [Route("date/{channelName}/{*published:datetime:regex(\\d{4}/\\d{1,2}/\\d{1,2})}")]  // '*' catch-all segments to match /yyyy/mm/dd 
+        public IQueryable<ArticleDto> GetChannelArticles(DateTime published, string channelName)
+        {
+            return _repository.Articles.Include(c => c.Channel)
+                .Where(a => a.Published <= published && a.Channel.Name.Equals(channelName, StringComparison.OrdinalIgnoreCase))
                 .OrderBy(a => a.Published)
                 .Select(AsArticleDto);
         }

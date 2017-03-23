@@ -67,7 +67,7 @@ namespace NewsFeed.API.App_Start
         {
             kernel.Bind<INewsFeedAPIContext>().To<NewsFeedAPIContext>();
             kernel.Bind<IArticleRepository>().To<InMemoryArticleRepository>();
-            //kernel.Bind<IChannelRepository>().To<ChannelRepository>();
+            kernel.Bind<IChannelRepository>().To<InMemoryChannelRepository>();
         }        
     }
 }

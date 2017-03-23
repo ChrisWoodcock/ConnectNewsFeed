@@ -13,6 +13,9 @@
         <nav class="navbar navbar-inverse navbar-fixed-top">
             <div class="container-fluid">
                 @Html.ActionLink("Connect - News Feed", "Index", "Home", new { @class= "navbar-brand" })
+                <ul class="nav navbar-nav">
+                        <li ng-repeat="channel in channels" ng-class="isChannelActive(channel.Name) ? 'active' : ''"><a href="#/articles/{{ channel.Name }}/"> {{ channel.Name }}</a></li>
+                </ul>
                 <ul class="nav navbar-nav navbar-right">
                     <li>
                         <p class="navbar-text" ng-bind="currentDate()"></p>

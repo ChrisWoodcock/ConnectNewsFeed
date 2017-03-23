@@ -1,25 +1,34 @@
 ﻿var newsFeed =
    angular.module("newsFeed", ['ngRoute'])
        .config(function ($routeProvider) {
-           $routeProvider.when("/", {
-               controller: "articlesController",
-               controllerAs: "vm",
-               templateUrl: "/content/views/viewArticles.html"
-           });
-
-           $routeProvider.when("/details/:articleId", {
-               controller: "articleDetailsController",
-               controllerAs: "vm",
-               templateUrl: "/content/views/articleDetailView.html"
-           });
-
-           $routeProvider.otherwise({ redirectTo: "/" });
+           $routeProvider.
+               when("/", {
+                 controller: "articlesController",
+                 controllerAs: "vm",
+                 templateUrl: "/content/views/viewArticles.html",
+                 paramShowByChannel: false
+               }).
+               when("/articles/:channelName", {
+                 controller: "articlesController",
+                 controllerAs: "vm",
+                 templateUrl: "/content/views/viewArticles.html",
+                 paramShowByChannel: true
+               }).
+               when("/details/:articleId", {
+                 controller: "articleDetailsController",
+                 controllerAs: "vm",
+                 templateUrl: "/content/views/articleDetailView.html"
+               }).
+               otherwise({ redirectTo: "/" });
        })
-       .service('dateService', [function () {
+       .service('articleService', [function () {
            var currentDate = new Date(2015, 0, 1); // Jan 01 2015
+           var channelName = null;
            return {
                getCurrentDate: function () { return currentDate; },
                setCurrentDate: function (value) { currentDate = value; },
+               getChannelName: function () { return channelName; },
+               setChannelName: function (value) { channelName = value; },
                formatCurrentDate: function () { return moment(currentDate).format("ddd D MMM YYYY"); }
            }
        }]);

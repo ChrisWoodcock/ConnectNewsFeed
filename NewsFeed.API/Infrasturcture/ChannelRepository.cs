@@ -21,5 +21,10 @@
                 return _context.Channels;
             }
         }
+
+        public void Dispose()
+        {
+            _context.Dispose();
+        }
     }
 }
